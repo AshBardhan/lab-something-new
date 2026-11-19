@@ -1,0 +1,64 @@
+/**
+ * TodoFilters Component Styles
+ *
+ * Uses BEM (Block Element Modifier) methodology:
+ * - Block: todo-filters
+ * - Elements: todo-filters__list, todo-filters__item, todo-filters__button
+ * - Modifiers: todo-filters__button--active
+ */
+
+.todo-filters {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-sm) 0;
+}
+
+.todo-filters__list {
+  display: flex;
+  gap: var(--spacing-xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-filters__item {
+  margin: 0;
+  padding: 0;
+}
+
+.todo-filters__button {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: color var(--transition-normal),
+              background-color var(--transition-normal),
+              border-color var(--transition-normal);
+}
+
+.todo-filters__button:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-background-hover);
+}
+
+/* Modifier: Active filter button */
+.todo-filters__button--active {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.todo-filters__button--active:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.todo-filters__button:active {
+  transform: scale(0.97);
+}

@@ -1,0 +1,34 @@
+/**
+ * TodoList Component Styles
+ *
+ * Uses BEM (Block Element Modifier) methodology:
+ * - Block: todo-list
+ * - Elements: todo-list__items, todo-list__item, todo-list__empty
+ */
+
+.todo-list {
+  width: 100%;
+}
+
+.todo-list__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list__item {
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list__empty {
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.todo-list__empty-text {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+  font-style: italic;
+}

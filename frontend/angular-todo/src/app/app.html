@@ -1,0 +1,55 @@
+<!--
+  App Component Template
+
+  The main application layout for the Todo List app.
+  Structure:
+  - Header with app title
+  - Todo input section for adding new todos
+  - Todo list section (conditionally rendered when todos exist)
+  - Footer with statistics and filters (conditionally rendered when todos exist)
+-->
+
+<div class="app">
+  <div class="app__container">
+    <!-- Header -->
+    <header class="app__header">
+      <h1 class="app__title">todos</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app__main">
+      <!-- Todo Input: Always visible -->
+      <section class="app__section">
+        <todo-input (todoAdded)="onTodoAdded($event)" />
+      </section>
+
+      <!-- Todo List and Footer: Only visible when there are todos -->
+      @if (hasTodos()) {
+        <section class="app__section">
+          <todo-list
+            [todos]="filteredTodos()"
+            (todoToggled)="onTodoToggled($event)"
+            (todoDeleted)="onTodoDeleted($event)"
+            (todoUpdated)="onTodoUpdated($event)"
+          />
+        </section>
+
+        <section class="app__section">
+          <todo-footer
+            [activeCount]="activeTodoCount()"
+            [completedCount]="completedTodoCount()"
+            [currentFilter]="currentFilter()"
+            (filterChanged)="onFilterChanged($event)"
+            (clearCompleted)="onClearCompleted()"
+          />
+        </section>
+      }
+    </main>
+
+    <!-- Footer with instructions -->
+    <footer class="app__info">
+      <p class="app__info-text">Double-click to edit a todo</p>
+    </footer>
+  </div>
+</div>
+

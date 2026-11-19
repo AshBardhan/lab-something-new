@@ -1,0 +1,20 @@
+<div class="todo-list">
+  @if (todos().length > 0) {
+    <ul class="todo-list__items">
+      @for (todo of todos(); track todo.id) {
+        <li class="todo-list__item">
+          <todo-item
+            [todo]="todo"
+            (toggled)="onToggle($event)"
+            (deleted)="onDelete($event)"
+            (updated)="onUpdate($event)"
+          />
+        </li>
+      }
+    </ul>
+  } @else {
+    <div class="todo-list__empty">
+      <p class="todo-list__empty-text">No todos yet. Add one above to get started!</p>
+    </div>
+  }
+</div>

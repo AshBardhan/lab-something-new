@@ -1,0 +1,40 @@
+<div class="todo-item" [class.todo-item--completed]="todo().completed">
+  @if (!isEditing) {
+    <div class="todo-item__view">
+      <input
+        type="checkbox"
+        class="todo-item__checkbox"
+        [checked]="todo().completed"
+        (change)="onToggle()"
+        [id]="'todo-' + todo().id"
+      />
+
+      <label
+        class="todo-item__label"
+        [for]="'todo-' + todo().id"
+        (dblclick)="startEditing()"
+      >
+        {{ todo().title }}
+      </label>
+
+      <button
+        type="button"
+        class="todo-item__delete"
+        (click)="onDelete()"
+        aria-label="Delete todo"
+      >
+        ×
+      </button>
+    </div>
+  } @else {
+    <div class="todo-item__edit-container">
+      <input
+        type="text"
+        class="todo-item__edit"
+        [(ngModel)]="editText"
+        (blur)="finishEditing()"
+        (keydown)="onEditKeydown($event)"
+      />
+    </div>
+  }
+</div>

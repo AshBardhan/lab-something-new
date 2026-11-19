@@ -1,0 +1,26 @@
+# IDE specific templates
+.idea/
+*.iml
+.vs/
+
+## macOS template
+*.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# SublimeText project files
+*.sublime-*
+
+## vim related
+*.swp
+*.swo
+
+## Package dependencies
+node_modules/
+
+## Build files and folders
+.next/

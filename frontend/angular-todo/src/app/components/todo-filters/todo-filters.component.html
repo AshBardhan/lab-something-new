@@ -1,0 +1,34 @@
+<nav class="todo-filters">
+  <ul class="todo-filters__list">
+    <li class="todo-filters__item">
+      <button
+        type="button"
+        class="todo-filters__button"
+        [class.todo-filters__button--active]="isActive('all')"
+        (click)="onFilterClick('all')"
+      >
+        All
+      </button>
+    </li>
+    <li class="todo-filters__item">
+      <button
+        type="button"
+        class="todo-filters__button"
+        [class.todo-filters__button--active]="isActive('active')"
+        (click)="onFilterClick('active')"
+      >
+        Active
+      </button>
+    </li>
+    <li class="todo-filters__item">
+      <button
+        type="button"
+        class="todo-filters__button"
+        [class.todo-filters__button--active]="isActive('completed')"
+        (click)="onFilterClick('completed')"
+      >
+        Completed
+      </button>
+    </li>
+  </ul>
+</nav>

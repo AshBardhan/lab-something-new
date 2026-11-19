@@ -1,0 +1,12 @@
+<div class="todo-input">
+  <form class="todo-input__form" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      class="todo-input__field"
+      placeholder="What needs to be done?"
+      [(ngModel)]="todoTitle"
+      name="todoTitle"
+      autocomplete="off"
+    />
+  </form>
+</div>

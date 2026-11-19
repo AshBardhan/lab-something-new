@@ -1,0 +1,25 @@
+<footer class="todo-footer">
+  <div class="todo-footer__content">
+    <div class="todo-footer__count">
+      <span class="todo-footer__count-number">{{ activeCount() }}</span>
+      <span class="todo-footer__count-text">{{ getItemText() }} left</span>
+    </div>
+
+    <todo-filters
+      [currentFilter]="currentFilter()"
+      (filterChanged)="onFilterChange($event)"
+    />
+
+    @if (completedCount() > 0) {
+      <button
+        type="button"
+        class="todo-footer__clear"
+        (click)="onClearCompleted()"
+      >
+        Clear completed
+      </button>
+    } @else {
+      <div class="todo-footer__clear-placeholder"></div>
+    }
+  </div>
+</footer>

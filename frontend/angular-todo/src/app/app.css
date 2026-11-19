@@ -1,0 +1,109 @@
+/**
+ * App Component Styles
+ *
+ * Uses BEM (Block Element Modifier) methodology:
+ * - Block: app
+ * - Elements: app__container, app__header, app__title, app__main, app__section, app__info
+ *
+ * This component provides the main layout structure for the todo application.
+ */
+
+/**
+ * Block: app
+ * The root container for the entire application
+ */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+/**
+ * Element: app__container
+ * Main content container with max-width and card styling
+ */
+.app__container {
+  width: 100%;
+  max-width: 600px;
+  background-color: transparent;
+}
+
+/**
+ * Element: app__header
+ * Header section containing the app title
+ */
+.app__header {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+/**
+ * Element: app__title
+ * The main application title
+ */
+.app__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-regular);
+  color: rgba(var(--color-primary-rgb), 0.3);
+  text-transform: lowercase;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+/**
+ * Element: app__main
+ * Main content area containing todo sections
+ */
+.app__main {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/**
+ * Element: app__section
+ * Individual sections within the main area
+ */
+.app__section {
+  /* No specific styling needed - serves as logical grouping */
+}
+
+/**
+ * Element: app__info
+ * Footer info section with instructions
+ */
+.app__info {
+  padding: var(--spacing-md) 0;
+  text-align: center;
+}
+
+/**
+ * Element: app__info-text
+ * Information text in the footer
+ */
+.app__info-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/**
+ * Responsive Design
+ * Adjustments for smaller screens
+ */
+@media (max-width: 640px) {
+  .app {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .app__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .app__header {
+    padding: var(--spacing-md) 0;
+  }
+}

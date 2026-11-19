@@ -1,0 +1,83 @@
+/**
+ * TodoFooter Component Styles
+ *
+ * Uses BEM (Block Element Modifier) methodology:
+ * - Block: todo-footer
+ * - Elements: todo-footer__content, todo-footer__count, todo-footer__clear
+ */
+
+.todo-footer {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+.todo-footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.todo-footer__count {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+  min-width: 120px;
+}
+
+.todo-footer__count-number {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.todo-footer__count-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.todo-footer__clear {
+  min-width: 120px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  color: var(--color-danger);
+  background-color: transparent;
+  border: 1px solid var(--color-danger);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: color var(--transition-normal),
+              background-color var(--transition-normal),
+              transform var(--transition-fast);
+}
+
+.todo-footer__clear:hover {
+  color: rgb(var(--color-background-rgb));
+  background-color: var(--color-danger);
+}
+
+.todo-footer__clear:active {
+  transform: scale(0.97);
+}
+
+.todo-footer__clear-placeholder {
+  min-width: 120px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 640px) {
+  .todo-footer__content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .todo-footer__count,
+  .todo-footer__clear,
+  .todo-footer__clear-placeholder {
+    min-width: auto;
+    text-align: center;
+  }
+}
