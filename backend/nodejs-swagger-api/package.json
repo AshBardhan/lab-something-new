@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-swagger-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "generate-swagger": "node generate-swagger-json.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  }
+}

@@ -1,0 +1,71 @@
+[
+{
+  "model": "customers.customer",
+  "pk": 1,
+  "fields": {
+    "name": "Ashish",
+    "industry": "Freelancer"
+  }
+},
+{
+  "model": "customers.customer",
+  "pk": 2,
+  "fields": {
+    "name": "John Doe",
+    "industry": "Nothing"
+  }
+},
+{
+  "model": "customers.customer",
+  "pk": 3,
+  "fields": {
+    "name": "Kenshiro",
+    "industry": "Martial Artist"
+  }
+},
+{
+  "model": "customers.order",
+  "pk": 1,
+  "fields": {
+    "customer": 1,
+    "description": "dev work",
+    "total_in_cents": 12300
+  }
+},
+{
+  "model": "customers.order",
+  "pk": 2,
+  "fields": {
+    "customer": 1,
+    "description": "documentation",
+    "total_in_cents": 1100
+  }
+},
+{
+  "model": "customers.order",
+  "pk": 3,
+  "fields": {
+    "customer": 2,
+    "description": "yapping",
+    "total_in_cents": 69
+  }
+},
+{
+  "model": "customers.order",
+  "pk": 4,
+  "fields": {
+    "customer": 3,
+    "description": "atatata punch",
+    "total_in_cents": 9999
+  }
+},
+{
+  "model": "customers.order",
+  "pk": 5,
+  "fields": {
+    "customer": 3,
+    "description": "one finger kill",
+    "total_in_cents": 666
+  }
+}
+]
