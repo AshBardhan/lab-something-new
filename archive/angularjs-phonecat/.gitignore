@@ -1,0 +1,14 @@
+logs/*
+!.gitkeep
+node_modules/
+app/lib/
+coverage/
+tmp
+.DS_Store
+.idea
+angular-phonecat-snapshots
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
